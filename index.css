@@ -3,7 +3,7 @@
 body {
     padding:0px;
     margin:0px;
-    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://media.discordapp.net/attachments/822613927459553301/1243272447365480582/20240209_174727.jpg?ex=6650df32&is=664f8db2&hm=34e235d2eccf8eb5c8b1bd144e9298fd328e715703931cf0b32ee0050d8a65b4&=&format=webp&width=803&height=602") center center;
+    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("rpiback.png") center center;
     background-size:cover;
     width:100vw;
     height:100vh;
