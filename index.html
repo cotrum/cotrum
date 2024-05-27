@@ -100,16 +100,19 @@
             <h1>contact.</h1>
             <section>
                 <h2>contact me</h2>
-                <p>
-                    <form>
-                        <input type="text" placeholder="name" required>
-                        <input type="email" placeholder="email" required><br>
-                        <textarea placeholder="your message" required rows="5"></textarea><br>
-                        <button class="btn_one">send</button>
-                    </form> 
-                </p>
+                <form action="send_email.php" method="POST">
+                    <input type="text" name="name" placeholder="name" required>
+                    <input type="email" name="email" placeholder="email" required><br>
+                    <textarea name="message" placeholder="your message" required rows="5"></textarea><br>
+                    <button type="submit" class="btn_one">send</button>
+                </form>
             </section>
         </div>
+        <script>
+            function closecontact() {
+                document.getElementById('contact_container').style.display = 'none';
+            }
+        </script>
         <div id="footer">
             <table>
                 <tr>
