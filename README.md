@@ -1,7 +1,5 @@
-<!-- # itws1100-lab03 -->
+# Personal Website
 
-# ITWS1100
+Site: marycotrupi.com
 
-Site URL: http://cotrumrpi.eastus.cloudapp.azure.com/iit/
-
-This is my (Mary Cotrupi's) GitHub repo containing my personal site with lab materials and other information for the Intro to IT and Web Science section 1 course.
+This is the GitHub repo containing my personal website, built with HTML, CSS, Javascript, and PHP.
