@@ -19,7 +19,6 @@ li{
     font-size: 21px;
 }
 
-
 #about_container img {
     float:right;
     max-width: 100px; /* Adjust the size of the image as needed */
@@ -37,8 +36,6 @@ li{
     margin-left: 10px;
     
 }
-
-
 
 #loading {
     width: 100vw;
