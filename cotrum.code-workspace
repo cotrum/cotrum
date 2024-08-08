@@ -1,17 +1,7 @@
 {
-	"folders": [
-		{
-			"name": "cotrum",
-			"path": ".."
-		},
-		{
-			"name": "2",
-			"path": "../../../../Downloads/fimbo-master/fimbo-master/2"
-		},
-		{
-			"name": "3",
-			"path": "../../../../Downloads/fimbo-master/fimbo-master/3"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
