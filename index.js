@@ -54,6 +54,19 @@ function closeart(){
         $("#art_container").css("display","none");
     },800);
 }
+
+document.querySelector('.btn_one').addEventListener('click', function() {
+    window.open('resources/resume2024.pdf', '_blank');
+});
+
+document.querySelector('.btn_two').addEventListener('click', function() {
+    window.open('https://github.com/cotrum/mentor-match', '_blank'); // Opens in a new tab
+});
+document.querySelector('.btn_three').addEventListener('click', function() {
+    window.open('https://theporchnh.com', '_blank'); // Opens in a new tab
+});
+
+
 setTimeout(function(){
     $("#loading").addClass("animated fadeOut");
     setTimeout(function(){

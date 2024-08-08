@@ -3,7 +3,7 @@
 body {
     padding:0px;
     margin:0px;
-    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("Images/rpiback.png") center center;
+    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("resources/rpiback.png") center center;
     background-size:cover;
     width:100vw;
     height:100vh;
@@ -18,6 +18,27 @@ a{
 li{
     font-size: 21px;
 }
+
+.download-button button {
+    background-color: transparent; /* Clear background */
+    border: 2px solid white; /* White border */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Align the button */
+    font-size: 16px; /* Text size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Oval shape */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.download-button button:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
+}
+
 
 #about_container img {
     float:right;
@@ -273,6 +294,36 @@ li{
 .btn_one {
     font-size:18px;
     font-family: 'Josefin Sans', sans-serif;
+    color:rgb(255, 134, 42);
+    background:#fff;
+    border:3px solid #fff;
+    padding:8px 40px;
+    border-radius:80px;
+    font-weight:bold;
+    margin:2vh 10px;
+    transition:0.4s ease-in-out;
+    
+}
+.btn_two:hover {
+    cursor:pointer;
+    color:rgb(255, 134, 42);
+    background:#fff;
+}
+.btn_two {
+    font-size:18px;
+    font-family: 'Josefin Sans', sans-serif;
+    color:#fff;
+    background:transparent;
+    border:3px solid #fff;
+    padding:8px 40px;
+    border-radius:80px;
+    font-weight:bold;
+    margin:2vh 10px;
+    transition:0.4s ease-in-out;
+}
+.btn_three {
+    font-size:18px;
+    font-family: 'Josefin Sans', sans-serif;
     color:#fff;
     background:transparent;
     border:3px solid #fff;
@@ -284,22 +335,9 @@ li{
 }
 .btn_one:hover {
     cursor:pointer;
-    color:rgb(255, 134, 42);
-    background:#fff;
+    padding:8px 60px;
 }
-.btn_two {
-    font-size:18px;
-    font-family: 'Josefin Sans', sans-serif;
-    color:rgb(255, 134, 42);
-    background:#fff;
-    border:3px solid #fff;
-    padding:8px 40px;
-    border-radius:80px;
-    font-weight:bold;
-    margin:2vh 10px;
-    transition:0.4s ease-in-out;
-}
-.btn_two:hover {
+.btn_three:hover {
     cursor:pointer;
     padding:8px 60px;
 }
