@@ -56,7 +56,7 @@ function closeart(){
 }
 
 document.querySelector('.btn_one').addEventListener('click', function() {
-    window.open('resources/resume2024.pdf', '_blank');
+    window.open('resources/mary-resume-2024.pdf', '_blank');
 });
 
 document.querySelector('.btn_two').addEventListener('click', function() {
