@@ -56,7 +56,7 @@ function closeart(){
 }
 
 document.querySelector('.btn_one').addEventListener('click', function() {
-    window.open('resources/RESUME-FALL24.pdf', '_blank');
+    window.open('resources/resume-cotrupi.pdf', '_blank');
 });
 
 document.querySelector('.btn_two').addEventListener('click', function() {
@@ -64,6 +64,9 @@ document.querySelector('.btn_two').addEventListener('click', function() {
 });
 document.querySelector('.btn_three').addEventListener('click', function() {
     window.open('https://theporchnh.com', '_blank'); // Opens in a new tab
+});
+document.querySelector('.btn_four').addEventListener('click', function() {
+    window.open('https://github.com/mattkatsenes/ledBoard', '_blank'); // Opens in a new tab
 });
 
 
@@ -76,5 +79,6 @@ setTimeout(function(){
       $("#about").removeClass("animated fadeIn");
       $("#contact").removeClass("animated fadeIn");
       $("#work").removeClass("animated fadeIn");
+      $("#art").removeClass("animated fadeIn");
     },1000);
 },1500);
