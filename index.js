@@ -60,7 +60,7 @@ document.querySelector('.btn_one').addEventListener('click', function() {
 });
 
 document.querySelector('.btn_two').addEventListener('click', function() {
-    window.open('https://github.com/cotrum/mentor-match', '_blank'); // Opens in a new tab
+    window.open('https://github.com/RPI-ITWS/ITWS-4500-S25-mongoose', '_blank'); // Opens in a new tab
 });
 document.querySelector('.btn_three').addEventListener('click', function() {
     window.open('https://theporchnh.com', '_blank'); // Opens in a new tab
