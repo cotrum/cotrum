@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>marycotrupi.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
+    <a id="art" onclick="showart()" class="animated fadeIn" style="animation-delay:2.2s;">art</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1>marycotrupi.</h1>
+        <h2>Comp Sci / Info Tech / Art</h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+            <a onclick="showart()">art</a>
+            <a onclick="showcontact()">contact</a>
+        </div>
+        
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>work.<img src="resources/tampa.jpg" alt="BSides"></h1>
+        <section>
+            <p>
+                As an undergraduate researcher and published academic author, I am primarily interested in the evolving intersection of cybersecurity and AI/ML and branching into quantum research. My involvements in the ISC2 Capital District NY Chapter, Rensselaer Cybersecurity Collaboratory (RCC), and RPI Association for Computing Machinery - Women (ACM-W) reflect my passion for CS and IT and my commitment to staying at the forefront of technology.
+            </p>
+            <!-- <button class="btn_one">Resume</button>
+            <br> -->
+            <h2>Research</h2>
+                <p><i>Ethics of Generative AI through Cybersecurity Training</i></p>
+            <ul>
+                <li>Conducted experiments to determine which of prompt engineers or cybersecurity experts (or dual experts) could better use AI models to develop cybersecurity awareness trainings for the RPI community. Reseach involved giving the trainings to RPI students and running paired t-tests and Shapiro-Wilk normality tests on the data to reveal tentative evidence that generative AI can be a worthwhile tool to help develop cybersecurity awareness training.</li>
+            </ul>
+            <p><i>Augmented Reality Cybersecurity CTF Pedagogy</i></p>
+            <ul>
+                <li>Teaching community members about cybersecurity through an augmented-reality (AR) web application - researched and developed CTF challenges on steganography, jump boxes, DNS poisoning, MFA bypass attacks, and spanning tree attacks.</li>
+            <!-- I am involved in two projects with Rensselaer's cybersecurity research lab (RCC), assisting small businesses in software development, and obtaining professional ISC2 and CompTIA certifications to expand my knowledge and passion in pursuit of a future career in cyber. -->
+            </ul>
+            <h2>Projects:</h2>
+            <button class="btn_two">Mongoose (AI Resume Enhancer App)</button>
+            <button class="btn_three">The Porch (Home Decor Business Site)</button>
+            <button class="btn_four">Tree Light Project (EE LED Project)</button>
+        </section>
+    </div>
+    <div id="art_container" class="container">
+        <div onclick="closeart()"><i class="fa-solid fa-angle-up"></i></div>
+        <h1>art.</h1>
+        <section>
+            <p>
+                I specialize in creating vibrant and captivating paintings of any subject. I love experimenting with color using primarily acrylic and water-soluable oil paints, especially with human and animal portraits. Each piece is crafted with love and careful attention to detail based on the provided reference image(s). 
+            </p>
+            <h2>Commission Info</h2>
+            <ul>
+                <li>8"x10" canvas, 0.75" depth (custom sizing available--see below)</li>
+                <li>$70 starting price</li>
+                <li>Choice of oil, acrylic, or mixed media</li>
+            </ul>
+
+            <p>The client may request a custom canvas size. Price will depend on said size and complexity of the piece. Large works require a 25% upfront fee. </p>
+            <p>Please contact <a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a> for additional questions or more info!</p>
+            <div class="image-gallery">
+                <img src="resources/girlMask.png" alt="Young girl with mask">
+                <img src="resources/windowgirl.png" alt="Large girl window painting">
+                <img src="resources/brinkley.png" alt="Pet portrait commission">
+                <img src="resources/flower.png" alt="Flower painting">
+                <img src="resources/dean.png" alt="Pop star painting">
+                <img src="resources/oldMan.png" alt="Father commission">
+                <img src="resources/poster.png" alt="Advertising poster">
+            </div>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+            <h1>about.</h1>
+            
+            <section>
+                <h2>Hi!</h2>
+                <p>
+                    <img src="resources/headshot2.jpg" alt="Mary Cotrupi">
+                    I'm Mary Cotrupi - a junior at Rensselaer Polytechnic Institute (RPI) pursuing a dual degree in Computer Science and Information Technology & Web Science.
+                </p>
+                <p>
+                    This website is for both my passions in computer science and art. For more information on my work and research experience in CS and IT, please visit the <b>"work"</b> tab on the home page. For art or commission-related inquries, please see the <b>"art"</b> tab.
+                </p>
+            </section>
+        </div>
+          <div id="contact_container" class="container">
+            <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+            <h1>contact.</h1>
+            <h2>Mary Cotrupi</h2>
+            <br>
+            <p>
+            EMAIL:&emsp;<a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a> <br><br><br>
+            LINKEDIN:&emsp;<a href="linkedin.com/in/cotrum">linkedin.com/in/cotrum</a> <br><br><br>
+        </p>
+        </div>
+        <script>
+            function closecontact() {
+                document.getElementById('contact_container').style.display = 'none';
+            }
+        </script>
+        <div id="footer">
+            <table>
+                <tr>
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://github.com/cotrum"><i class="fab fa-github"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://www.linkedin.com/in/cotrum/"><i class="fab fa-linkedin"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="tel:+16039986886"><i class="fa-solid fa-phone"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="mailto:marycotrupi@gmail.com"><i class="fas fa-envelope"></i></a></td>
+                </tr>
+            </table>
+        </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
