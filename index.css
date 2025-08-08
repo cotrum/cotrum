@@ -7,7 +7,7 @@ body {
     background-size:cover;
     width:100vw;
     height:100vh;
-    overflow:auto;
+    overflow:hidden;
     font-family: 'Josefin Sans', sans-serif;
 }
 
