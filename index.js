@@ -55,9 +55,9 @@ function closeart(){
     },800);
 }
 
-// document.querySelector('.btn_one').addEventListener('click', function() {
-//     window.open('resources/resume-cotrupi.pdf', '_blank');
-// });
+document.querySelector('.btn_one').addEventListener('click', function() {
+    window.open('resources/Cotrupi_Resume.pdf', '_blank');
+});
 
 document.querySelector('.btn_two').addEventListener('click', function() {
     window.open('https://github.com/RPI-ITWS/ITWS-4500-S25-mongoose', '_blank'); // Opens in a new tab
