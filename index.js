@@ -56,7 +56,7 @@ function closeart(){
 }
 
 document.querySelector('.btn_one').addEventListener('click', function() {
-    window.open('resources/resume-cotrupi.pdf', '_blank');
+    window.open('resources/resume-fall2025.pdf', '_blank');
 });
 
 document.querySelector('.btn_two').addEventListener('click', function() {
