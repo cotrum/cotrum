@@ -59,15 +59,13 @@ document.querySelector('.btn_one').addEventListener('click', function() {
     window.open('resources/resume-fall2025.pdf', '_blank');
 });
 
-document.querySelector('.btn_two').addEventListener('click', function() {
-    window.open('https://github.com/RPI-ITWS/ITWS-4500-S25-mongoose', '_blank'); // Opens in a new tab
+document.querySelectorAll('.project-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const url = this.getAttribute('data-url');
+        window.open(url, '_blank');
+    });
 });
-document.querySelector('.btn_three').addEventListener('click', function() {
-    window.open('https://theporchnh.com', '_blank'); // Opens in a new tab
-});
-document.querySelector('.btn_four').addEventListener('click', function() {
-    window.open('https://github.com/mattkatsenes/ledBoard', '_blank'); // Opens in a new tab
-});
+
 
 
 setTimeout(function(){

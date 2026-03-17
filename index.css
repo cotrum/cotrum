@@ -342,7 +342,7 @@ li{
     transition:0.4s ease-in-out;
     
 }
-.btn_two {
+.project-btn {
     font-size:18px;
     font-family: 'Josefin Sans', sans-serif;
     color:#fff;
@@ -354,46 +354,16 @@ li{
     margin:2vh 10px;
     transition:0.4s ease-in-out;
 }
-.btn_three {
-    font-size:18px;
-    font-family: 'Josefin Sans', sans-serif;
-    color:#fff;
-    background:transparent;
-    border:3px solid #fff;
-    padding:8px 40px;
-    border-radius:80px;
-    font-weight:bold;
-    margin:2vh 10px;
-    transition:0.4s ease-in-out;
-}
-.btn_four {
-    font-size:18px;
-    font-family: 'Josefin Sans', sans-serif;
-    color:#fff;
-    background:transparent;
-    border:3px solid #fff;
-    padding:8px 40px;
-    border-radius:80px;
-    font-weight:bold;
-    margin:2vh 10px;
-    transition:0.4s ease-in-out;
-}
+
 .btn_one:hover {
     cursor:pointer;
     padding:8px 60px;
 }
-.btn_three:hover {
+.project-btn:hover {
     cursor:pointer;
     padding:8px 60px;
 }
-.btn_two:hover {
-    cursor:pointer;
-    padding:8px 60px;
-}
-.btn_four:hover {
-    cursor:pointer;
-    padding:8px 60px;
-}
+
 .container form input {
     width:46%;
     margin:20px 1%;
