@@ -581,5 +581,171 @@ li{
     #footer {
         bottom: 0;
     }
-    
+}
+
+    /* ── Custom cursor ── */
+* { cursor: none !important; }
+
+#cursor-dot {
+    width: 8px; height: 8px;
+    background: rgb(255, 134, 42);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s;
+}
+
+/* ── Tilt card ── */
+#middle {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.06s ease-out;
+}
+
+/* ── Quantum circuit ── */
+.quantum-circuit {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 24px 0 8px;
+    opacity: 0.85;
+}
+
+/* ── Expandable publications ── */
+.pub-section {
+    margin-bottom: 8px;
+}
+.pub-title {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: opacity 0.2s;
+}
+.pub-title::before {
+    content: '-';
+    font-size: 22px;
+    line-height: 1.2;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    font-style: normal;
+    font-weight: bold;
+}
+.pub-title.open::before {
+    transform: rotate(45deg);
+}
+.pub-title:hover {
+    opacity: 0.8;
+}
+.pub-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    opacity: 0;
+}
+.pub-body.open {
+    max-height: 800px;
+    opacity: 1;
+}
+
+/* ── Staggered about bullets ── */
+#about_container .stagger-item {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+#about_container .stagger-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ── Lightbox ── */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 99998;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+#lightbox.active {
+    display: flex;
+}
+#lightbox img {
+    max-width: 88vw;
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+}
+#lightbox-caption {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 44px;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+#lightbox-close:hover { color: rgb(255, 134, 42); }
+#lightbox-prev,
+#lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: sans-serif;
+    transition: color 0.2s;
+    padding: 0 16px;
+}
+#lightbox-prev:hover, #lightbox-next:hover { color: rgb(255, 134, 42); }
+#lightbox-prev { left: 0; }
+#lightbox-next { right: 0; }
+
+
+/* ── Social icon pulse on contact open ── */
+@keyframes socialBounce {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.5); color: rgb(255, 134, 42); }
+    70%  { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+.social-bounce {
+    animation: socialBounce 0.5s ease forwards;
+}
+
+/* ── Art image cursor ── */
+.image-gallery img {
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.image-gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* ── Cursor panel variant ── */
+#cursor-dot.panel-open {
+    background: white;
+}
+
+body.panel-open ::selection {
+    color: rgb(255, 134, 42);
+    background: #fff;
 }

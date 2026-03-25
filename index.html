@@ -17,6 +17,19 @@
     <link rel="manifest" href="icons/site.webmanifest">
 </head>
 <body>
+
+    
+<div id="cursor-dot"></div>
+
+<div id="lightbox">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <button id="lightbox-prev" onclick="lightboxNav(-1)">&#8249;</button>
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption"></div>
+    <button id="lightbox-next" onclick="lightboxNav(1)">&#8250;</button>
+</div>
+
+
     <div id="loading">
         <div id="spinner"></div>
     </div>
@@ -47,116 +60,164 @@
     </div>
     <div id="work_container" class="container">
         <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>research.<img src="resources/conf-collage.jpg" alt="Conference Pictures"></h1>
+        <h1>work.<img src="resources/conf-collage.jpg" alt="Conference Pictures"></h1>
         <section>
-            <p>
-                <!-- I am primarily interested in the evolving intersection of cybersecurity and AI/ML. My involvements in the ISC2 Capital District NY Chapter, Rensselaer Cybersecurity Collaboratory (RCC), and RPI Association for Computing Machinery - Women (ACM-W) reflect my passion for CS and IT and my commitment to staying at the forefront of technology. -->
-                I have performed undergraduate quantum computing and cybersecurity research at Rensselaer Polytechnic Institute and additional quantum research at the Chinese University of Hong Kong. With a degree in Computer Science, my work looks primarily at the intersection of quantum computing with machine learning, cybersecurity, and HPC.
-                <!-- passionate about quantum research and particularly how it can be leveraged in the realm of cybersecurity. As a published co-author with national conference experience, I love learning about other research and sharing my own, and I am eager to explore more early quantum applications. 
-                <br><br>
-                My current work explores the use of quantum machine learning for advanced network intrusion detection on noisy quantum hardware. See below for more info, with a journal article coming soon. 
-                <br><br>I have also researched CTF development and the ethical use of generative AI for cybersecurity training and pedagogy, which you can view more about below! -->
-
-                <!-- I am excited to share my passion for information security and stay at the forefront of technology and defense. -->
             
-            </p>
-            <button class="btn_one">Resume</button>
-            <br>
-            <h2>Publications</h2>
-            <p><i>Quantum Machine Learning Kernels for Network Intrusion Detection in the NISQ Era</i></p>
-            <ul>
-                <li>Cotrupi, Mary L. and Brian R. Callahan, Forthcoming. "Towards Practical Quantum Kernels for Network Intrusion Detection." Proceedings of the First AAAI Symposium on Quantum Information & Machine Learning (QIML). AAAI Fall 2025 Symposium, Arlington, VA. Nov. 6-8, 2025.</li>
-                <li>Author's note: My first foray into quantum computing, this 10-week research project under the RPI School of Science Undergraduate Research Progam culminated in the authoring and presentation of a paper and poster at QIML. This project was so much fun for me that it inspired me to look further into quantum research opportunities and entirely shifted my focus within computer science toward quantum, which i now aim to pursue post-graduate study in.</li>
-                
-                <!-- <li>For a more technical overview of my research: <a href="resources/QML-NIDS-AAAI.pdf" target="_blank">Towards Practical Quantum Kernels for Network Intrusion Detection</a> <br><br><br></li> -->
-            </ul>
+    
+    <p>I have performed quantum computing and cybersecurity research at RPI as both a member of the Rensselaer Cybersecurity Collaboratory (RCC) under Dr. Brian Callahan and with the School of Science undergraduate research program. 
+        <br>I have continued my research abroad at the Chinese University of Hong Kong (CUHK), maintaining a focus on quantum with NISQ-era evaluation and applications in ML, cybersecurity, and HPC.
+    </p>
 
-            <p><i>Ethics of Generative AI through Cybersecurity Training</i></p>
+    <hr>
+
+    <h2>Publications</h2>
+
+    <div class="pub-section">
+        <p class="pub-title"><i>Quantum Machine Learning Kernels for Network Intrusion Detection in the NISQ Era</i></p>
+        <div class="pub-body">
             <ul>
-                <li>Callahan, Brian, Quinn Colognato, and Mary Cotrupi. 2024. “Generative AI for Cybersecurity Awareness Training: Skills, Strategies, and Accountabilities.” BSides St. Pete Conference, FL. Sep. 14, 2024</li>
+                <li>Cotrupi, Mary L. and Brian R. Callahan, Forthcoming. "Towards Practical Quantum Kernels for Network Intrusion Detection." Proceedings of the First AAAI Symposium on Quantum Information &amp; Machine Learning (QIML). AAAI Fall 2025 Symposium, Arlington, VA. Nov. 6-8, 2025.</li>
+                <li>Author's note: My first foray into quantum computing, this 10-week research project under the RPI School of Science Undergraduate Research Program culminated in the authoring and presentation of a paper and poster at QIML. This project was so much fun for me that it inspired me to look further into quantum research opportunities and entirely shifted my focus within computer science toward quantum, which I now aim to pursue post-graduate study in.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pub-section">
+        <p class="pub-title"><i>Ethics of Generative AI through Cybersecurity Training</i></p>
+        <div class="pub-body">
+            <ul>
+                <li>Callahan, Brian, Quinn Colognato, and Mary Cotrupi. 2024. "Generative AI for Cybersecurity Awareness Training: Skills, Strategies, and Accountabilities." BSides St. Pete Conference, FL. Sep. 14, 2024.</li>
                 <li>Studied the ethical use of generative AI in cybersecurity awareness training by comparing training modules developed by prompt engineers, cybersecurity experts, and hybrid roles. Delivered modules to RPI students and analyzed outcomes.</li>
             </ul>
-            <p><i>Augmented Reality Cybersecurity CTF Pedagogy</i></p>
-            <ul>
-                <li>Callahan, Brian Robert, Sanya Joseph, Shoshana Sugerman, Quinn Colognato, Mary Cotrupi, et al. "RC3TF, an Augmented Reality CTF: A case study in improving cybersecurity pedagogy for the undergraduate research laboratory." Proceedings of the 20th Annual Symposium on Information Assurance (ASIA). University at Albany. Albany, NY. Jun. 3-4, 2025</li>
-                <li><a href="https://www.academia.edu/129736149/RC3TF_an_Augmented_Reality_CTF_A_case_study_in_improving_cybersecurity_pedagogy_for_the_undergraduate_research_laboratory" target="_blank">www.academia.edu</a></li>
-            <!-- I am involved in two projects with Rensselaer's cybersecurity research lab (RCC), assisting small businesses in software development, and obtaining professional ISC2 and CompTIA certifications to expand my knowledge and passion in pursuit of a future career in cyber. -->
-            <!-- <button class="btn_one">Resume</button> -->
-            <br>
-            <!-- <button class="btn_one">Resume</button> -->
-            <br>
-            <hr>
-            <h2>Fun Coding Projects ☺</h2>
-            <button class="project-btn" data-url="https://github.com/RPI-ITWS/ITWS-4500-S25-mongoose">Mongoose (AI Resume Enhancer App)</button>
-            <button class="project-btn" data-url="https://theporchnh.com">The Porch (Home Decor Business Site)</button>
-            <button class="project-btn" data-url="https://github.com/mattkatsenes/ledBoard">Tree Light Project (EE LED Project)</button>
-            <button class="project-btn" data-url="https://github.com/cotrum/MU-CRC">Monmouth University CRC Site</button>
-            <button class="project-btn" data-url="https://github.com/cotrum/cotrum">This Site!</button>
-        </section>
+        </div>
     </div>
-    <div id="art_container" class="container">
-        <div onclick="closeart()"><i class="fa-solid fa-angle-up"></i></div>
-        <h1>mary's art corner ☺</h1>
-        <section>
-            <!-- <p> 
-                <br>my free time I take on commissions and fun art projects. I particularly love to create colorful and captivating portraits, experimenting primarily with acrylic and water-soluable oil paint and colored pencil. Please contact me if you are interested in a commission! 
-            </p> -->
-            <h2>Commission Info</h2>
-            <ul>
-                <li>8"x10" canvas, 0.75" depth (other sizing available)</li>
-                <li>$70 starting price</li>
-                <li>Oil, acrylic, or mixed media (colored pencil)</li>
-            </ul>
 
-            <p>The client may request a custom (atypical) canvas size with an additional cost.
-                <br>Large works (>36") require a 25% upfront fee. </p>
-            <p>Email <a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a> with questions or to make a commission request!</p>
-            <div class="image-gallery">
-                <img src="resources/windowgirl.png" alt="Large girl window painting">
-                <img src="resources/girlMask.png" alt="Young girl with mask">
-                <img src="resources/dean.png" alt="DEAN">
-                <img src="resources/brinkley.png" alt="Pet portrait commission">
-                <img src="resources/flower.png" alt="Flower painting">
-                <img src="resources/west.jpg" alt="RPI West Hall"> 
-                <img src="resources/oldMan.png" alt="Father commission">
-                <!-- <img src="resources/poster.png" alt="Advertising poster"> -->
-            </div>
-        </section>
+    <div class="pub-section">
+        <p class="pub-title"><i>Augmented Reality Cybersecurity CTF Pedagogy</i></p>
+        <div class="pub-body">
+            <ul>
+                <li>Callahan, Brian Robert, Sanya Joseph, Shoshana Sugerman, Quinn Colognato, Mary Cotrupi, et al. "RC3TF, an Augmented Reality CTF: A case study in improving cybersecurity pedagogy for the undergraduate research laboratory." Proceedings of the 20th Annual Symposium on Information Assurance (ASIA). University at Albany. Albany, NY. Jun. 3-4, 2025.</li>
+                <li><a href="https://www.academia.edu/129736149/RC3TF_an_Augmented_Reality_CTF_A_case_study_in_improving_cybersecurity_pedagogy_for_the_undergraduate_research_laboratory" target="_blank">www.academia.edu</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+    <h2>Coding Projects ☺</h2>
+    <button class="project-btn" data-url="https://github.com/RPI-ITWS/ITWS-4500-S25-mongoose">Mongoose (AI Resume Enhancer App)</button>
+    <button class="project-btn" data-url="https://theporchnh.com">The Porch (Home Decor Business Site)</button>
+    <button class="project-btn" data-url="https://github.com/mattkatsenes/ledBoard">Tree Light Project (EE LED Project)</button>
+    <button class="project-btn" data-url="https://github.com/cotrum/MU-CRC">Monmouth University CRC Site</button>
+    <button class="project-btn" data-url="https://github.com/cotrum/cotrum">This Site!</button>
+
+    <hr><br>
+
+      <button class="btn_one">My Resume</button>
+</section>
     </div>
     <div id="about_container" class="container">
             <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-            <h1>Mary Cotrupi</h1>
+            <h1>about.</h1>
             
             <section>
                 <h2>hi!</h2>
                 <p>
-                    <img src="resources/headshot2.jpg" alt="Mary Cotrupi">
-                    I'm a junior studying Computer Science with minors in IT & Web Science and Quantum Computing at Rensselaer Polytechnic Institute in upstate New York. Coming from Moultonborough, New Hampshire and having completed an exchange at the Chinese University of Hong Kong, I am now planning to pursue post-graduate education in computer science and continue my research in quantum computing.
+                    <img src="resources/headshot3.jpg" alt="Mary Cotrupi">
+                    My name's Mary&mdash;I'm a junior at Rensselaer Polytechnic Institute majoring in Computer Science with minors in Quantum Computing and IT & Web Science (ITWS).
+                </p>
+
+                    <p>
+                        On this website, you can find how to contact me, detailed work/research information, and information for art commissions. 
+                    </p>
+                    <!-- Moultonborough, New Hampshire and having completed an exchange semester at the Chinese University of Hong Kong, I am now planning to pursue post-graduate education in computer science and continue my research in quantum computing.-->
                 </p>
                 <p>
-                    This website is for both my passions in computer science and art. For more information on my quantum computing and cybersecurity research, please see the <b>work</b> page. For art or commission-related inquries, please see <b>art</b>. 
-                    <br><br>The code for this website can be viewed at <a href="https://github.com/cotrum" target="_blank">https://github.com/cotrum</a>.  
+                    <!-- This website is for both my passions in computer science and art. For more information on my quantum computing and cybersecurity research, please see the <b>work</b> page. For art or commission-related inquries, please see <b>art</b>.  -->
+                    Site code can be found at <a href="https://github.com/cotrum" target="_blank">https://github.com/cotrum</a>.  
                 </p>
+                <hr>
+                <p>some quick fun facts about me:
+                    <ul>
+    <li class="stagger-item">I'm from a small town in New Hampshire (pop. ~5000!)</li>
+    <li class="stagger-item">I'm a violinist in the Rensselaer Orchestra</li>
+    <li class="stagger-item">I studied abroad in Hong Kong</li>
+</ul>
+                    </p>
+                    <br>
+                <h2>thanks for visiting!</h2>
             </section>
         </div>
           <div id="contact_container" class="container">
             <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
             <h1>contact.</h1>
             <h2>Mary Cotrupi</h2>
-            <br>
+            <svg class="quantum-circuit" viewBox="0 0 320 90" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20" y1="25" x2="300" y2="25" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+        <line x1="20" y1="55" x2="300" y2="55" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+        <line x1="20" y1="80" x2="300" y2="80" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="4" y="29" fill="rgba(255,255,255,0.5)" font-size="9" font-family="monospace">|0⟩</text>
+        <text x="4" y="59" fill="rgba(255,255,255,0.5)" font-size="9" font-family="monospace">|0⟩</text>
+        <rect x="45" y="16" width="22" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+        <text x="56" y="28" text-anchor="middle" fill="white" font-size="10" font-family="monospace" font-weight="bold">H</text>
+        <rect x="45" y="46" width="22" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+        <text x="56" y="58" text-anchor="middle" fill="white" font-size="10" font-family="monospace" font-weight="bold">H</text>
+        <circle cx="130" cy="25" r="5" fill="white"/>
+        <line x1="130" y1="25" x2="130" y2="55" stroke="white" stroke-width="1.5"/>
+        <circle cx="130" cy="55" r="9" fill="none" stroke="white" stroke-width="1.5"/>
+        <line x1="130" y1="46" x2="130" y2="64" stroke="white" stroke-width="1.5"/>
+        <line x1="121" y1="55" x2="139" y2="55" stroke="white" stroke-width="1.5"/>
+        <rect x="195" y="16" width="26" height="18" rx="3" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+        <text x="208" y="28" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="9" font-family="monospace">Rz(θ)</text>
+        <rect x="258" y="16" width="22" height="18" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+        <path d="M261,31 Q269,20 277,31" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+        <line x1="269" y1="30" x2="275" y2="22" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+        <rect x="258" y="46" width="22" height="18" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+        <path d="M261,61 Q269,50 277,61" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+        <line x1="269" y1="60" x2="275" y2="52" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+        <circle r="3.5" fill="rgba(255,220,150,0.9)">
+            <animate attributeName="cx" values="20;300" dur="2.8s" repeatCount="indefinite"/>
+            <animate attributeName="cy" values="25;25" dur="2.8s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="2.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="3.5" fill="rgba(255,220,150,0.9)">
+            <animate attributeName="cx" values="20;300" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+            <animate attributeName="cy" values="55;55" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+        </circle>
+    </svg>
             <p>
-            EMAIL&emsp;<a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a> <br><br><br>
-            LINKEDIN&emsp;<a href="https://linkedin.com/in/cotrum">linkedin.com/in/cotrum</a> <br><br><br>
-            
-            
-            
-            </p>
+    EMAIL&emsp;
+    <a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a>
+    <br><br><br>
+    LINKEDIN&emsp;
+    <a href="https://linkedin.com/in/cotrum">linkedin.com/in/cotrum</a>
+</p>
         </div>
-        <script>
-            function closecontact() {
-                document.getElementById('contact_container').style.display = 'none';
-            }
-        </script>
+        <div id="art_container" class="container">
+    <div onclick="closeart()"><i class="fa-solid fa-angle-up"></i></div>
+    <h1>art.</h1>
+    <section>
+        <h2>Commission Info Fast Facts</h2>
+        <ul>
+            <li>8"x10" canvas, 0.75" depth (other sizes available)</li>
+            <li>$70 starting price</li>
+            <li>Oil, acrylic, or mixed media (colored pencil)</li>
+        </ul>
+        <p>The client may request a custom (atypical) canvas size with an additional cost.<br>Large works (>36") require a 25% upfront fee.</p>
+        <p>Please email <a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a> with questions or to make a commission request!</p>
+        <div class="image-gallery">
+            <img src="resources/windowgirl.png" alt="Large girl window painting">
+            <img src="resources/girlMask.png" alt="Young girl with mask">
+            <img src="resources/snickerscoloredpencil.png" alt="Snickers colored pencil">
+            <img src="resources/dean.png" alt="DEAN">
+            <img src="resources/brinkley.png" alt="Pet portrait commission">
+            <img src="resources/flower.png" alt="Flower painting">
+            <img src="resources/snickersaj.png" alt="Snickers digital">
+              <img src="resources/west.jpg" alt="RPI West Hall">
+            <!-- <img src="resources/oldMan.png" alt="Father commission"> -->
+        </div>
+    </section>
+</div>
         <div id="footer">
             <table>
                 <tr>
