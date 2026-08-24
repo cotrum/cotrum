@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>marycotrupi.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -18,8 +16,8 @@
 </head>
 <body>
 
-    
 <div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
 
 <div id="lightbox">
     <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -28,7 +26,6 @@
     <div id="lightbox-caption"></div>
     <button id="lightbox-next" onclick="lightboxNav(1)">&#8250;</button>
 </div>
-
 
     <div id="loading">
         <div id="spinner"></div>
@@ -46,190 +43,283 @@
     <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
     <a id="art" onclick="showart()" class="animated fadeIn" style="animation-delay:2.2s;">art</a>
     <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
-    
+
     <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
-        <h1>marycotrupi.</h1>
-        <h2>Quantum Computing | Info Sec | Art</h2>
+        <div class="name-wrap">
+            <svg id="strings" viewBox="0 0 900 480" aria-hidden="true" focusable="false">
+                <defs>
+                    <linearGradient id="string-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0">
+                        <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+                        <stop offset="0.09" stop-color="#fff" stop-opacity="1"/>
+                        <stop offset="0.91" stop-color="#fff" stop-opacity="1"/>
+                        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+                <path class="string" data-note="G" data-y="28"  data-freq="196.00" d="M0,28 Q450,28 900,28"/>
+                <path class="string" data-note="D" data-y="156" data-freq="293.66" d="M0,156 Q450,156 900,156"/>
+                <path class="string" data-note="A" data-y="284" data-freq="440.00" d="M0,284 Q450,284 900,284"/>
+                <path class="string" data-note="E" data-y="412" data-freq="659.25" d="M0,412 Q450,412 900,412"/>
+                <text class="note-label" data-note="G" x="24" y="16">G</text>
+                <text class="note-label" data-note="D" x="24" y="144">D</text>
+                <text class="note-label" data-note="A" x="24" y="272">A</text>
+                <text class="note-label" data-note="E" x="24" y="400">E</text>
+            </svg>
+            <h1>marycotrupi.</h1>
+            <h2>quantum computing &middot; research &middot; art</h2>
+        </div>
         <div id="menu">
             <a onclick="showabout()">about</a>
             <a onclick="showwork()">work</a>
             <a onclick="showart()">art</a>
             <a onclick="showcontact()">contact</a>
         </div>
-        
     </div>
+
     <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>work.<img src="resources/conf-collage.jpg" alt="Conference Pictures"></h1>
-        <section>
-            
-    
-    <p>I have performed quantum computing and cybersecurity research at RPI as both a member of the Rensselaer Cybersecurity Collaboratory (RCC) under Dr. Brian Callahan and with the School of Science undergraduate research program. 
-        <br>I have continued my research abroad at the Chinese University of Hong Kong (CUHK), maintaining a focus on quantum with NISQ-era evaluation and applications in ML, cybersecurity, and HPC.
-    </p>
+        <div class="close-btn" onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <div class="panel-inner">
+            <h1>work.</h1>
 
-    <hr>
-
-    <h2>Publications</h2>
-
-    <div class="pub-section">
-        <p class="pub-title"><i>Quantum Machine Learning Kernels for Network Intrusion Detection in the NISQ Era</i></p>
-        <div class="pub-body">
-            <ul>
-                <li>Cotrupi, Mary L. and Brian R. Callahan, Forthcoming. "Towards Practical Quantum Kernels for Network Intrusion Detection." Proceedings of the First AAAI Symposium on Quantum Information &amp; Machine Learning (QIML). AAAI Fall 2025 Symposium, Arlington, VA. Nov. 6-8, 2025.</li>
-                <li>Author's note: My first foray into quantum computing, this 10-week research project under the RPI School of Science Undergraduate Research Program culminated in the authoring and presentation of a paper and poster at QIML. This project was so much fun for me that it inspired me to look further into quantum research opportunities and entirely shifted my focus within computer science toward quantum, which I now aim to pursue post-graduate study in.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="pub-section">
-        <p class="pub-title"><i>Ethics of Generative AI through Cybersecurity Training</i></p>
-        <div class="pub-body">
-            <ul>
-                <li>Callahan, Brian, Quinn Colognato, and Mary Cotrupi. 2024. "Generative AI for Cybersecurity Awareness Training: Skills, Strategies, and Accountabilities." BSides St. Pete Conference, FL. Sep. 14, 2024.</li>
-                <li>Studied the ethical use of generative AI in cybersecurity awareness training by comparing training modules developed by prompt engineers, cybersecurity experts, and hybrid roles. Delivered modules to RPI students and analyzed outcomes.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="pub-section">
-        <p class="pub-title"><i>Augmented Reality Cybersecurity CTF Pedagogy</i></p>
-        <div class="pub-body">
-            <ul>
-                <li>Callahan, Brian Robert, Sanya Joseph, Shoshana Sugerman, Quinn Colognato, Mary Cotrupi, et al. "RC3TF, an Augmented Reality CTF: A case study in improving cybersecurity pedagogy for the undergraduate research laboratory." Proceedings of the 20th Annual Symposium on Information Assurance (ASIA). University at Albany. Albany, NY. Jun. 3-4, 2025.</li>
-                <li><a href="https://www.academia.edu/129736149/RC3TF_an_Augmented_Reality_CTF_A_case_study_in_improving_cybersecurity_pedagogy_for_the_undergraduate_research_laboratory" target="_blank">www.academia.edu</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <hr>
-    <h2>Coding Projects ☺</h2>
-    <button class="project-btn" data-url="https://github.com/RPI-ITWS/ITWS-4500-S25-mongoose">Mongoose (AI Resume Enhancer App)</button>
-    <button class="project-btn" data-url="https://theporchnh.com">The Porch (Home Decor Business Site)</button>
-    <button class="project-btn" data-url="https://github.com/mattkatsenes/ledBoard">Tree Light Project (EE LED Project)</button>
-    <button class="project-btn" data-url="https://github.com/cotrum/MU-CRC">Monmouth University CRC Site</button>
-    <button class="project-btn" data-url="https://github.com/cotrum/cotrum">This Site!</button>
-
-    <hr><br>
-
-      <button class="btn_one">My Resume</button>
-</section>
-    </div>
-    <div id="about_container" class="container">
-            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-            <h1>about.</h1>
-            
-            <section>
-                <h2>hi!</h2>
+            <div class="intro-grid">
                 <p>
-                    <img src="resources/headshot3.jpg" alt="Mary Cotrupi">
-                    My name's Mary&mdash;I'm a junior at Rensselaer Polytechnic Institute majoring in Computer Science with minors in Quantum Computing and IT & Web Science (ITWS).
+                    I research quantum computing. Most recently, I spent a summer at the
+                    National Security Agency working on classical decoders for Decoded Quantum
+                    Interferometry. Before that: quantum machine learning research with the RPI
+                    School of Science, cybersecurity research with the Rensselaer Cybersecurity
+                    Collaboratory, and a semester abroad at the Chinese University of Hong Kong.
                 </p>
+                <img src="resources/conf-collage.jpg" alt="Conference pictures">
+            </div>
 
-                    <p>
-                        On this website, you can find how to contact me, detailed work/research information, and information for art commissions. 
-                    </p>
-                    <!-- Moultonborough, New Hampshire and having completed an exchange semester at the Chinese University of Hong Kong, I am now planning to pursue post-graduate education in computer science and continue my research in quantum computing.-->
+            <h2>research</h2>
+
+            <div class="xp">
+                <div class="xp-head">
+                    <span class="xp-role">Future of Computing Summer Intern &mdash; National Security Agency</span>
+                    <span class="xp-date">Summer 2026</span>
+                </div>
+                <p class="xp-desc">
+                    Co-developed the blocked fast Walsh&ndash;Hadamard transform (BFWHT), an exact
+                    set-covering decoder for the low-weight binary closest vector problem, with
+                    CUDA/GPU implementations benchmarked on A100-class hardware. Built the
+                    end-to-end Decoded Quantum Interferometry (DQI) research codebase with
+                    interchangeable decoders and reversible resource estimation, and executed
+                    small circuits on IBM's 156-qubit Kingston system.
                 </p>
-                <p>
-                    <!-- This website is for both my passions in computer science and art. For more information on my quantum computing and cybersecurity research, please see the <b>work</b> page. For art or commission-related inquries, please see <b>art</b>.  -->
-                    Site code can be found at <a href="https://github.com/cotrum" target="_blank">https://github.com/cotrum</a>.  
+            </div>
+
+            <div class="xp">
+                <div class="xp-head">
+                    <span class="xp-role">Quantum Machine Learning Researcher &mdash; RPI School of Science</span>
+                    <span class="xp-date">Summer 2025</span>
+                </div>
+                <p class="xp-desc">
+                    Designed a Qiskit quantum-kernel/SVM pipeline for network intrusion detection,
+                    achieving 85%+ accuracy on RPI's 127-qubit IBM Quantum System One. Built the
+                    reproducible <a href="https://github.com/cotrum/QML-NIDS" target="_blank">QML-NIDS</a>
+                    codebase and first-authored the resulting AAAI QIML proceedings paper.
                 </p>
-                <hr>
-                <p>some quick fun facts about me:
+            </div>
+
+            <div class="xp">
+                <div class="xp-head">
+                    <span class="xp-role">Cybersecurity Research Assistant &mdash; Rensselaer Cybersecurity Collaboratory</span>
+                    <span class="xp-date">2024 &ndash; 2025</span>
+                </div>
+                <p class="xp-desc">
+                    Developed augmented-reality CTF challenges in steganography, DNS poisoning, and
+                    MFA bypass; coauthored a CISSE journal article and ASIA proceedings paper on
+                    generative AI and cybersecurity pedagogy.
+                </p>
+            </div>
+
+            <h2>publications &amp; presentations</h2>
+
+            <div class="pub-section">
+                <p class="pub-title"><i>Towards Efficient Low-Weight Decoding: A Blocked Fast Walsh&ndash;Hadamard Transform</i></p>
+                <div class="pub-body">
                     <ul>
-    <li class="stagger-item">I'm from a small town in New Hampshire (pop. ~5000!)</li>
-    <li class="stagger-item">I'm a violinist in the Rensselaer Orchestra</li>
-    <li class="stagger-item">I studied abroad in Hong Kong</li>
-</ul>
+                        <li>Cotrupi, M. L., Gutti, M., Ralph, B., &amp; Sandberg, K. (2026). FCSI 2026 final research report, National Security Agency.</li>
+                        <li>At n=64, m=2,097,152, t=8, the BFWHT reduced estimated decoding operations by 732&times; versus optimized Gray-code enumeration, and reduced estimated logical qubits for DQI by 688&times; on a 64&times;64 benchmark.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pub-section">
+                <p class="pub-title"><i>Towards Practical Quantum Kernels for Network Intrusion Detection</i></p>
+                <div class="pub-body">
+                    <ul>
+                        <li>Cotrupi, M. L., &amp; Callahan, B. R. (2025). <i>Proceedings of the AAAI Symposium Series</i>, 7(1), 339&ndash;342. <a href="https://doi.org/10.1609/aaaiss.v7i1.36903" target="_blank">doi:10.1609/aaaiss.v7i1.36903</a> &middot; <a href="resources/QML-NIDS-AAAI.pdf" target="_blank">pdf</a></li>
+                        <li>Author's note: my first foray into quantum computing. This 10-week project culminated in a paper and poster at the first AAAI QIML symposium&mdash;and it was so much fun that it entirely shifted my focus within computer science toward quantum, which I now aim to pursue in post-graduate study.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pub-section">
+                <p class="pub-title"><i>A Case Study for Combating Student Overuse of Generative AI in Cybersecurity Education</i></p>
+                <div class="pub-body">
+                    <ul>
+                        <li>Sugerman, S., Joseph, S., Colognato, Q., Cotrupi, M. L., et al. (2026). <i>Journal of The Colloquium for Information Systems Security Education</i>, 13(1), Article 11. <a href="https://doi.org/10.53735/cisse.v13i1.216" target="_blank">doi:10.53735/cisse.v13i1.216</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pub-section">
+                <p class="pub-title"><i>RC3TF, an Augmented Reality CTF: Improving Cybersecurity Pedagogy for the Undergraduate Research Laboratory</i></p>
+                <div class="pub-body">
+                    <ul>
+                        <li>Callahan, B. R., Joseph, S., Sugerman, S., Colognato, Q., Cotrupi, M. L., et al. (2025). <i>Proceedings of the 20th Annual Symposium on Information Assurance (ASIA)</i>. <a href="https://doi.org/10.2139/SSRN.6550178" target="_blank">doi:10.2139/SSRN.6550178</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pub-section">
+                <p class="pub-title"><i>Generative AI for Cybersecurity Awareness Training: Skills, Strategies, and Accountabilities</i></p>
+                <div class="pub-body">
+                    <ul>
+                        <li>Callahan, B., Colognato, Q., &amp; Cotrupi, M. (2024). Presented at BSides St. Pete, FL. Sep. 14, 2024.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>projects</h2>
+            <div class="btn-row">
+                <button class="project-btn" data-url="https://github.com/cotrum/QML-NIDS">QML-NIDS (Quantum Kernel Research)</button>
+                <button class="project-btn" data-url="https://github.com/RPI-ITWS/ITWS-4500-S25-mongoose">Mongoose (AI Resume Enhancer)</button>
+                <button class="project-btn" data-url="https://theporchnh.com">The Porch (Home Decor Site)</button>
+                <button class="project-btn" data-url="https://github.com/mattkatsenes/ledBoard">Tree Light Project (EE LED)</button>
+                <button class="project-btn" data-url="https://github.com/cotrum/MU-CRC">Monmouth University CRC Site</button>
+                <button class="project-btn" data-url="https://github.com/cotrum/cotrum">This Site!</button>
+            </div>
+
+            <button class="btn_one">resume &#8599;</button>
+        </div>
+    </div>
+
+    <div id="about_container" class="container">
+        <div class="close-btn" onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+        <div class="panel-inner">
+            <h1>about.</h1>
+
+            <div class="about-grid">
+                <div>
+                    <h2>hi!</h2>
+                    <p>
+                        My name's Mary&mdash;I'm a computer science student at Rensselaer Polytechnic
+                        Institute, pursuing a co-terminal B.S. (May 2027) and M.S. (Dec. 2027) with
+                        minors in Quantum Computing and IT &amp; Web Science.
                     </p>
-                    <br>
-                <h2>thanks for visiting!</h2>
-            </section>
+                    <p>
+                        My research interests are quantum software, quantum error correction &amp;
+                        decoding, NISQ algorithms, and high-performance computing&mdash;and I plan to
+                        continue into post-graduate study in quantum computing.
+                    </p>
+                    <p>
+                        Site code lives at <a href="https://github.com/cotrum" target="_blank">github.com/cotrum</a>.
+                    </p>
+                </div>
+                <img src="resources/headshot3.jpg" alt="Mary Cotrupi">
+            </div>
+
+            <hr>
+
+            <p>some quick fun facts:</p>
+            <ul>
+                <li class="stagger-item">I grew up in Nebraska riding combines in cornfields</li>
+                <li class="stagger-item">I have played the violin for 10+ years (hence the violin strings on the homepage!)</li>
+                <li class="stagger-item">I studied abroad in Hong Kong and traveled all over Asia but came back with only European friends</li>
+            </ul>
+
+            <h2>that's it! thanks for visiting!</h2>
         </div>
-          <div id="contact_container" class="container">
-            <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+    </div>
+
+    <div id="contact_container" class="container">
+        <div class="close-btn" onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+        <div class="panel-inner">
             <h1>contact.</h1>
-            <h2>Mary Cotrupi</h2>
-            <p>
-    EMAIL&emsp;
-    <a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a>
-    <br><br>
-    LINKEDIN&emsp;
-    <a href="https://linkedin.com/in/cotrum">linkedin.com/in/cotrum</a>
-</p>
+            <div class="contact-list">
+                <p><span>email</span><a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a></p>
+                <p><span>linkedin</span><a href="https://linkedin.com/in/cotrum" target="_blank">linkedin.com/in/cotrum</a></p>
+                <p><span>github</span><a href="https://github.com/cotrum" target="_blank">github.com/cotrum</a></p>
+            </div>
             <svg class="quantum-circuit" viewBox="0 0 320 90" xmlns="http://www.w3.org/2000/svg">
-        <line x1="20" y1="25" x2="300" y2="25" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
-        <line x1="20" y1="55" x2="300" y2="55" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
-        <line x1="20" y1="80" x2="300" y2="80" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
-        <text x="4" y="29" fill="rgba(255,255,255,0.5)" font-size="9" font-family="monospace">|0⟩</text>
-        <text x="4" y="59" fill="rgba(255,255,255,0.5)" font-size="9" font-family="monospace">|0⟩</text>
-        <rect x="45" y="16" width="22" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-        <text x="56" y="28" text-anchor="middle" fill="white" font-size="10" font-family="monospace" font-weight="bold">H</text>
-        <rect x="45" y="46" width="22" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-        <text x="56" y="58" text-anchor="middle" fill="white" font-size="10" font-family="monospace" font-weight="bold">H</text>
-        <circle cx="130" cy="25" r="5" fill="white"/>
-        <line x1="130" y1="25" x2="130" y2="55" stroke="white" stroke-width="1.5"/>
-        <circle cx="130" cy="55" r="9" fill="none" stroke="white" stroke-width="1.5"/>
-        <line x1="130" y1="46" x2="130" y2="64" stroke="white" stroke-width="1.5"/>
-        <line x1="121" y1="55" x2="139" y2="55" stroke="white" stroke-width="1.5"/>
-        <rect x="195" y="16" width="26" height="18" rx="3" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-        <text x="208" y="28" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="9" font-family="monospace">Rz(θ)</text>
-        <rect x="258" y="16" width="22" height="18" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-        <path d="M261,31 Q269,20 277,31" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-        <line x1="269" y1="30" x2="275" y2="22" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-        <rect x="258" y="46" width="22" height="18" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-        <path d="M261,61 Q269,50 277,61" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-        <line x1="269" y1="60" x2="275" y2="52" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-        <circle r="3.5" fill="rgba(255,220,150,0.9)">
-            <animate attributeName="cx" values="20;300" dur="2.8s" repeatCount="indefinite"/>
-            <animate attributeName="cy" values="25;25" dur="2.8s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="2.8s" repeatCount="indefinite"/>
-        </circle>
-        <circle r="3.5" fill="rgba(255,220,150,0.9)">
-            <animate attributeName="cx" values="20;300" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
-            <animate attributeName="cy" values="55;55" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
-        </circle>
-    </svg>
+                <line x1="20" y1="25" x2="300" y2="25" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+                <line x1="20" y1="55" x2="300" y2="55" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+                <line x1="20" y1="80" x2="300" y2="80" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
+                <text x="4" y="29" fill="rgba(255,255,255,0.5)" font-size="9" font-family="monospace">|0⟩</text>
+                <text x="4" y="59" fill="rgba(255,255,255,0.5)" font-size="9" font-family="monospace">|0⟩</text>
+                <rect x="45" y="16" width="22" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+                <text x="56" y="28" text-anchor="middle" fill="white" font-size="10" font-family="monospace" font-weight="bold">H</text>
+                <rect x="45" y="46" width="22" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+                <text x="56" y="58" text-anchor="middle" fill="white" font-size="10" font-family="monospace" font-weight="bold">H</text>
+                <circle cx="130" cy="25" r="5" fill="white"/>
+                <line x1="130" y1="25" x2="130" y2="55" stroke="white" stroke-width="1.5"/>
+                <circle cx="130" cy="55" r="9" fill="none" stroke="white" stroke-width="1.5"/>
+                <line x1="130" y1="46" x2="130" y2="64" stroke="white" stroke-width="1.5"/>
+                <line x1="121" y1="55" x2="139" y2="55" stroke="white" stroke-width="1.5"/>
+                <rect x="195" y="16" width="26" height="18" rx="3" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                <text x="208" y="28" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="9" font-family="monospace">Rz(θ)</text>
+                <rect x="258" y="16" width="22" height="18" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                <path d="M261,31 Q269,20 277,31" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+                <line x1="269" y1="30" x2="275" y2="22" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+                <rect x="258" y="46" width="22" height="18" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                <path d="M261,61 Q269,50 277,61" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+                <line x1="269" y1="60" x2="275" y2="52" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+                <circle r="3.5" fill="rgba(255,220,150,0.9)">
+                    <animate attributeName="cx" values="20;300" dur="2.8s" repeatCount="indefinite"/>
+                    <animate attributeName="cy" values="25;25" dur="2.8s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="2.8s" repeatCount="indefinite"/>
+                </circle>
+                <circle r="3.5" fill="rgba(255,220,150,0.9)">
+                    <animate attributeName="cx" values="20;300" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+                    <animate attributeName="cy" values="55;55" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
         </div>
-        <div id="art_container" class="container">
-    <div onclick="closeart()"><i class="fa-solid fa-angle-up"></i></div>
-    <h1>art.</h1>
-    <section>
-        <h2>Commission fast facts</h2>
-        <ul>
-            <li>8"x10" canvas, 0.75" depth (other sizes available)</li>
-            <li>$70 starting price</li>
-            <li>Oil, acrylic, or mixed media (colored pencil)</li>
-        </ul>
-        <p>The client may request a custom (atypical) canvas size with an additional cost.<br>Large works (>36") require a 25% upfront fee.</p>
-        <p>Please email <a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a> with questions or to make a commission request!</p>
-        <div class="image-gallery">
-            <img src="resources/windowgirl.png" alt="Large girl window painting">
-            <img src="resources/girlMask.png" alt="Young girl with mask">
-            <img src="resources/snickerscoloredpencil.png" alt="Snickers colored pencil">
-            <img src="resources/dean.png" alt="DEAN">
-            <img src="resources/brinkley.png" alt="Pet portrait commission">
-            <img src="resources/flower.png" alt="Flower painting">
-            <img src="resources/snickersaj.png" alt="Snickers digital">
-              <img src="resources/west.jpg" alt="RPI West Hall">
-            <!-- <img src="resources/oldMan.png" alt="Father commission"> -->
+    </div>
+
+    <div id="art_container" class="container">
+        <div class="close-btn" onclick="closeart()"><i class="fa-solid fa-angle-up"></i></div>
+        <div class="panel-inner">
+            <h1>art.</h1>
+
+            <h2>commission fast facts</h2>
+            <ul>
+                <li>8"x10" canvas, 0.75" depth (other sizes available)</li>
+                <li>$70 starting price</li>
+                <li>Oil, acrylic, or mixed media (colored pencil)</li>
+            </ul>
+            <p>
+                Custom (atypical) canvas sizes are available at an additional cost.
+                Large works (&gt;36") require a 25% upfront fee.
+            </p>
+            <p>
+                Email <a href="mailto:marycotrupi@gmail.com">marycotrupi@gmail.com</a> with
+                questions or to make a commission request!
+            </p>
+
+            <div class="image-gallery">
+                <img src="resources/windowgirl.png" alt="Large girl window painting">
+                <img src="resources/girlMask.png" alt="Young girl with mask">
+                <img src="resources/snickerscoloredpencil.png" alt="Snickers colored pencil">
+                <img src="resources/dean.png" alt="DEAN">
+                <img src="resources/brinkley.png" alt="Pet portrait commission">
+                <img src="resources/flower.png" alt="Flower painting">
+                <img src="resources/snickersaj.png" alt="Snickers digital">
+                <img src="resources/west.jpg" alt="RPI West Hall">
+            </div>
         </div>
-    </section>
-</div>
-        <div id="footer">
-            <table>
-                <tr>
-                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://github.com/cotrum"><i class="fab fa-github"></i></a></td>
-                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://www.linkedin.com/in/cotrum/"><i class="fab fa-linkedin"></i></a></td>
-                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://www.researchgate.net/profile/Mary-Cotrupi/"><i class="fa-brands fa-researchgate"></i>
-                    <!-- <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="tel:+16039986886"><i class="fa-solid fa-phone"></i></a></td> -->
-                    <!-- <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="tel:+16039986886"><i class="fa-solid fa-phone"></i></a></td> -->
-                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="mailto:marycotrupi@gmail.com"><i class="fas fa-envelope"></i></a></td>
-                </tr>
-            </table>
-        </div>
+    </div>
+
+    <div id="footer">
+        <a class="social animated zoomIn" style="animation-delay:2.2s;" href="https://github.com/cotrum"><i class="fab fa-github"></i></a>
+        <a class="social animated zoomIn" style="animation-delay:2.4s;" href="https://www.linkedin.com/in/cotrum/"><i class="fab fa-linkedin"></i></a>
+        <a class="social animated zoomIn" style="animation-delay:2.6s;" href="https://www.researchgate.net/profile/Mary-Cotrupi/"><i class="fa-brands fa-researchgate"></i></a>
+        <a class="social animated zoomIn" style="animation-delay:2.8s;" href="mailto:marycotrupi@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
     <script src="index.js" type="text/javascript"></script>
     <script src="particles.js"></script>
     <script src="app.js"></script>
