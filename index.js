@@ -1,43 +1,9 @@
-/* ─── Cursor: instant dot + trailing ring ── */
+/* ─── Custom cursor ────────────────────── */
 if (window.matchMedia('(pointer: fine)').matches) {
-    const dot  = document.getElementById('cursor-dot');
-    const ring = document.getElementById('cursor-ring');
-    const HOVER_SEL = 'a, button, .pub-title, .close-btn, .image-gallery img, #lightbox-close, .name-wrap h1';
-    let mx = -100, my = -100, ringX = -100, ringY = -100;
-    let ringScale = 1, targetScale = 1, pressed = false;
-
-    let rafActive = false;
-    function cursorLoop() {
-        ringX += (mx - ringX) * 0.22;
-        ringY += (my - ringY) * 0.22;
-        const target = pressed ? 0.72 : targetScale;
-        ringScale += (target - ringScale) * 0.25;
-        ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%) scale(${ringScale})`;
-        if (Math.abs(mx - ringX) < 0.1 && Math.abs(my - ringY) < 0.1 && Math.abs(target - ringScale) < 0.002) {
-            rafActive = false;
-            return;
-        }
-        requestAnimationFrame(cursorLoop);
-    }
-    function wakeCursor() {
-        if (!rafActive) {
-            rafActive = true;
-            requestAnimationFrame(cursorLoop);
-        }
-    }
+    const dot = document.getElementById('cursor-dot');
 
     document.addEventListener('mousemove', e => {
-        mx = e.clientX;
-        my = e.clientY;
-        dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
-        wakeCursor();
-    });
-    document.addEventListener('mousedown', () => { pressed = true; wakeCursor(); });
-    document.addEventListener('mouseup',   () => { pressed = false; wakeCursor(); });
-    document.addEventListener('mouseover', e => {
-        targetScale = e.target.closest(HOVER_SEL) ? 1.55 : 1;
-        ring.classList.toggle('hover', targetScale > 1);
-        wakeCursor();
+        dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
     });
 }
 
